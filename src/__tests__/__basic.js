@@ -1,14 +1,11 @@
-import { calculateTotal } from '../calculate';
-
+import calculateTotal from '../calculate.js';
 test('basic test', ()=>{
     let result = 4;
     expect(result).toBe(4);
 });
-
 test('calcTotal', ()=>{
     const list = [
         {
-
             id: 468,
             name: 'Война и мир',
             count: 3,
@@ -21,7 +18,6 @@ test('calcTotal', ()=>{
             price: 2000
         },
     ];
-
     const result = calculateTotal(list);
     expect(result).toBe(3500);
 });

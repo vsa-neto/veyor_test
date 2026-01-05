@@ -1,7 +1,6 @@
 import js from '@eslint/js';
 import globals from 'globals';
 // import { defineConfig } from "eslint/config";
-
 export default [
     js.configs.recommended, // including recommended rules if needed
     {
@@ -15,45 +14,31 @@ export default [
                 myCustomGlobal: 'readonly' // or "writable"
             }
         },
-
         rules: {
             // files: ['src/**/*.js'],
             'no-underscore-dangle': [ 'off' ], // двойное подчеркивание перед/после переменной
             'import/no-extraneous-dependencies': 'off', // импорт из дев-зависимостей
-
-            indent: [
-                'error', 4
-            ],
+            indent: [ 'error', 4 ],
             // отступы, авто
-            semi: [
-                'error', 'always'
-            ],
+            semi: [ 'error', 'always' ],
             // точка с запятой, авто
             'no-unused-vars': 'off', // не испоьзуемые переменные
             'no-console': 'off', // console.log
             'no-var': 'error',
-
-            'max-len': [
-                'error', { code: 120 }
-            ],
+            'max-len': [ 'error', { code: 120 } ],
             // длинна строки, нет авто
             // одинарные кавычки, авто
-            quotes: [
-                'error', 'single'
-            ], // одинарные кавычки, авто
-            'array-bracket-spacing': [
-                'error', 'always'
-            ],
+            quotes: [ 'error', 'single' ], // одинарные кавычки, авто
+            'array-bracket-spacing': [ 'error', 'always' ],
             // пробелы внутри массива - авто
-            // 'array-bracket-newline': [
-            //     'error', {
-            //         'multiline': true, 'minItems': 2
-            //     }
-            // ],
-            // перенос элементов массива на новые строки, если многоэлементный - авто
-            'object-curly-spacing': [
-                'error', 'always'
+            'array-bracket-newline': [
+                'error', {
+                    'multiline': true,
+                    // 'minItems': 4
+                }
             ],
+            // перенос элементов массива на новые строки, если многоэлементный - авто
+            'object-curly-spacing': [ 'error', 'always' ],
             // пробелы внутри объекта
             'object-curly-newline': [
                 'error', {
@@ -74,9 +59,7 @@ export default [
                     }
                 }
             ], // убираем много пробелов в разных местах, авто
-            'key-spacing': [
-                'error', { 'mode': 'strict' }
-            ],
+            'key-spacing': [ 'error', { 'mode': 'strict' } ],
             'no-trailing-spaces': 'error',
             'no-multiple-empty-lines': [
                 'error', {
@@ -85,6 +68,5 @@ export default [
                 }
             ],
         },
-
     }
 ];

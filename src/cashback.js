@@ -12,7 +12,6 @@ const cashback = {
         percent: 5
     }
 };
-
 export default function calcCashback(amount) {
     switch (true) {
     case amount >= cashback.gold.bound:
@@ -25,4 +24,3 @@ export default function calcCashback(amount) {
         return 0;
     }
 }
-
